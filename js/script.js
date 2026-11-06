@@ -17,9 +17,9 @@ projectButtons.forEach(function (button) {
   });
 });
 
-// ---------- Contact form check ----------
-// Uses Bootstrap's validation styles. The form is not connected
-// to an email service, so it just shows a message when it is filled in.
+// ---------- Contact form ----------
+// Uses Bootstrap's validation styles. When the form is filled in,
+// the message is sent to my email using FormSubmit (formsubmit.co).
 const form = document.querySelector('.needs-validation');
 
 if (form) {
@@ -29,14 +29,30 @@ if (form) {
 
     if (!form.checkValidity()) {
       status.textContent = 'Please fill in all fields.';
-    } else {
-      status.textContent = 'Thanks! Your message is ready. (This form is not connected to email yet.)';
-      form.reset();
-      form.classList.remove('was-validated');
+      form.classList.add('was-validated');
       return;
     }
 
-    form.classList.add('was-validated');
+    status.textContent = 'Sending...';
+
+    fetch('https://formsubmit.co/ajax/Dossantosgabriel143@gmail.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        if (String(data.success) === 'true') {
+          status.textContent = 'Thanks! Your message has been sent.';
+          form.reset();
+          form.classList.remove('was-validated');
+        } else {
+          status.textContent = 'Sorry, the message could not be sent. Please email me instead.';
+        }
+      })
+      .catch(function () {
+        status.textContent = 'Sorry, the message could not be sent. Please email me instead.';
+      });
   });
 }
 

@@ -1,0 +1,358 @@
+/* ==========================================================
+   Gabriel Dos Santos - Portfolio styles
+   Loaded AFTER Bootstrap so these rules can override it.
+   Colours: black (main), red, blue and orange (accents)
+   ========================================================== */
+
+/* ---------- 1. Colour and font variables ---------- */
+:root {
+  --black: #0d0d0d;
+  --dark: #1a1a1a;
+  --grey: #2b2b2b;
+  --light: #f4f4f4;
+  --text: #222222;
+  --red: #e63946;
+  --blue: #1d6fd8;
+  --orange: #f77f00;
+  --heading-font: 'Oswald', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
+/* ---------- 2. General ---------- */
+body {
+  font-family: var(--body-font);
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--blue);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Skip link for keyboard users - only shows when tabbed to */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--red);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---------- 3. Navbar ---------- */
+.site-nav {
+  background-color: var(--black);
+  border-bottom: 3px solid var(--red);
+}
+
+.site-nav .navbar-brand {
+  font-family: var(--heading-font);
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.site-nav .navbar-brand span {
+  color: var(--red);
+}
+
+.site-nav .nav-link {
+  color: #ddd;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0.3rem;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  color: var(--orange);
+}
+
+/* make the hamburger icon white on the black navbar */
+.site-nav .navbar-toggler {
+  border-color: #555;
+}
+
+.site-nav .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ---------- 4. Hero (home page) ---------- */
+.hero {
+  background-color: var(--black);
+  color: #fff;
+  padding: 6rem 0;
+}
+
+.hero .tagline {
+  color: var(--orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-img {
+  border: 4px solid var(--red);
+  border-radius: 10px;
+}
+
+/* ---------- 5. Page header (inside pages) ---------- */
+.page-header {
+  background-color: var(--dark);
+  color: #fff;
+  padding: 3.5rem 0;
+  border-bottom: 4px solid var(--blue);
+}
+
+.page-header p {
+  color: #ccc;
+  max-width: 650px;
+}
+
+/* ---------- 6. Buttons ---------- */
+.btn-main {
+  background-color: var(--red);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-main:hover {
+  background-color: var(--orange);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: var(--black);
+}
+
+/* ---------- 7. Cards and boxes ---------- */
+.info-card {
+  background-color: #fff;
+  border: none;
+  border-top: 4px solid var(--red);
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* each card on the home page gets a different accent colour */
+.info-card.blue {
+  border-top-color: var(--blue);
+}
+
+.info-card.orange {
+  border-top-color: var(--orange);
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--red);
+}
+
+.info-card.blue .card-icon {
+  color: var(--blue);
+}
+
+.info-card.orange .card-icon {
+  color: var(--orange);
+}
+
+/* ---------- 8. Resume timeline ---------- */
+.timeline-item {
+  border-left: 3px solid var(--red);
+  padding-left: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.timeline-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-item .date {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: var(--black);
+  color: #fff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  margin: 0 0.3rem 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.skill-badge.red {
+  background-color: var(--red);
+}
+
+.skill-badge.blue {
+  background-color: var(--blue);
+}
+
+.skill-badge.orange {
+  background-color: var(--orange);
+}
+
+/* sticky side panel on the resume page (large screens only) */
+.side-panel {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- 9. Portfolio cards ---------- */
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* stops images getting squished */
+}
+
+.project-card button {
+  border: none;
+  padding: 0;
+  background: none;
+  width: 100%;
+}
+
+.project-tag {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* ---------- 10. Accordion colours ---------- */
+.accordion-button:not(.collapsed) {
+  background-color: var(--black);
+  color: #fff;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.4);
+}
+
+/* ---------- 11. Contact form ---------- */
+.contact-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 0.2rem rgba(29, 111, 216, 0.25);
+}
+
+/* ---------- 12. Footer ---------- */
+.site-footer {
+  background-color: var(--black);
+  color: #bbb;
+  padding: 2rem 0;
+  border-top: 3px solid var(--red);
+}
+
+.site-footer a {
+  color: var(--orange);
+}
+
+/* ---------- 13. Media queries ---------- */
+
+/* tablets and smaller */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .side-panel {
+    margin-bottom: 2rem;
+  }
+}
+
+/* phones */
+@media (max-width: 575px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-header {
+    padding: 2.5rem 0;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  .contact-box {
+    padding: 1.2rem;
+  }
+}

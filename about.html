@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About Gabriel Dos Santos, club soccer player and junior coach">
+  <meta name="author" content="Gabriel Dos Santos">
+  <title>Gabriel Dos Santos | About</title>
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Google Fonts: Oswald for headings, Roboto for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap and Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- My CSS goes last -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#maincontent">Skip to main content</a>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Gabriel <span>Dos Santos</span></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="maincontent">
+
+  <header class="page-header">
+    <div class="container">
+      <h1>About Me</h1>
+      <p class="lead mb-0">A bit about who I am, how I play and where I want to go.</p>
+    </div>
+  </header>
+
+  <div class="container my-5">
+    <div class="row g-5 align-items-start">
+
+      <!-- photo column -->
+      <div class="col-lg-4">
+        <img src="img/profile.jpg" class="img-fluid rounded mb-3" alt="Portrait of Gabriel Dos Santos" width="600" height="700">
+      </div>
+
+      <!-- text column -->
+      <div class="col-lg-8">
+        <section>
+          <h2>My Story</h2>
+          <p>I have loved soccer for as long as I can remember. I play for a local club and train every week to keep improving. My goal is to keep moving up through the levels and one day play the game professionally.</p>
+          <p>Outside of playing, I have coached young players for five months, which taught me how to explain skills simply and keep a group motivated. I have just about finished the first year of my diploma at Western Sydney University The College, where I have been learning to plan, design and build websites like this one.</p>
+        </section>
+
+        <!-- Accordion so the page doesn't get too long -->
+        <section class="mt-4">
+          <h2>More About Me</h2>
+          <div class="accordion" id="aboutAccordion">
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#aboutOne"
+                        aria-expanded="true" aria-controls="aboutOne">
+                  How I play
+                </button>
+              </h3>
+              <div id="aboutOne" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  I play as a [your position]. I try to work hard for the team, communicate on the field and stay calm under pressure.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutTwo"
+                        aria-expanded="false" aria-controls="aboutTwo">
+                  What I value
+                </button>
+              </h3>
+              <div id="aboutTwo" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  <ul class="mb-0">
+                    <li>Teamwork and respect for teammates and coaches</li>
+                    <li>Turning up on time and giving full effort</li>
+                    <li>Listening to feedback and getting better</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutThree"
+                        aria-expanded="false" aria-controls="aboutThree">
+                  My goals
+                </button>
+              </h3>
+              <div id="aboutThree" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  In the short term I want to earn a spot in a higher-level squad. Long term, I want to play professionally and keep coaching young players along the way.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <p class="mb-0">&copy; <span id="year">2026</span> Gabriel Dos Santos</p>
+    <p class="mb-0"><a href="pdf/gabriel_dossantos_resume.pdf" download>Download my resume (PDF)</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

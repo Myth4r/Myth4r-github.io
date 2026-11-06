@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Gabriel Dos Santos">
+  <meta name="author" content="Gabriel Dos Santos">
+  <title>Gabriel Dos Santos | Contact</title>
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Google Fonts: Oswald for headings, Roboto for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap and Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- My CSS goes last -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#maincontent">Skip to main content</a>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Gabriel <span>Dos Santos</span></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="maincontent">
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="lead mb-0">Clubs, coaches and teams are welcome to get in touch.</p>
+    </div>
+  </header>
+
+  <div class="container my-5">
+    <div class="row g-4">
+
+      <!-- contact details -->
+      <section class="col-lg-5">
+        <div class="contact-box h-100">
+          <h2>Get In Touch</h2>
+          <p><i class="bi bi-envelope" aria-hidden="true"></i> <strong>Email:</strong><br>
+            <a href="mailto:Dossantosgabriel143@gmail.com">Dossantosgabriel143@gmail.com</a></p>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i> <strong>Location:</strong><br>Sydney, NSW</p>
+          <p class="mb-0"><i class="bi bi-calendar-check" aria-hidden="true"></i> <strong>Available for:</strong><br>Trials, club squads and junior coaching.</p>
+        </div>
+      </section>
+
+      <!-- contact form (Bootstrap validation) -->
+      <section class="col-lg-7">
+        <form class="contact-box needs-validation" novalidate>
+          <h2>Send A Message</h2>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="reason" class="form-label">Reason for contact</label>
+              <select class="form-select" id="reason" required>
+                <option value="">Choose one...</option>
+                <option>Trial or squad offer</option>
+                <option>Coaching</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback">Please choose a reason.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+
+            <div class="col-12">
+              <button class="btn btn-main" type="submit">Send</button>
+              <p class="form-status mt-3 mb-0" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <p class="mb-0">&copy; <span id="year">2026</span> Gabriel Dos Santos</p>
+    <p class="mb-0"><a href="pdf/gabriel_dossantos_resume.pdf" download>Download my resume (PDF)</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

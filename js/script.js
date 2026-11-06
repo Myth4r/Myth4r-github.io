@@ -47,13 +47,23 @@ if (form) {
           form.reset();
           form.classList.remove('was-validated');
         } else {
-          status.textContent = 'Sorry, the message could not be sent. Please email me instead.';
+          openEmailApp();
         }
       })
-      .catch(function () {
-        status.textContent = 'Sorry, the message could not be sent. Please email me instead.';
-      });
+      .catch(openEmailApp);
   });
+
+  // Backup: if the email service is down, open the visitor's email app
+  // with the message already filled in.
+  function openEmailApp() {
+    const status = document.querySelector('.form-status');
+    const fields = form.elements;
+    const subject = 'Website message: ' + fields.reason.value;
+    const body = fields.message.value + '\n\nFrom: ' + fields.name.value + ' (' + fields.email.value + ')';
+    status.textContent = 'Opening your email app so you can send the message.';
+    window.location.href = 'mailto:Dossantosgabriel143@gmail.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
 }
 
 // ---------- Footer year ----------
